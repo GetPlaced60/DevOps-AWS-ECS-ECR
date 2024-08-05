@@ -10,3 +10,15 @@
 * Background on Docker
 * AWS Account
 * Creativity is always a plus point.
+
+## What are Dockers and Containers?
+
+![Docker](https://imgur.com/raGErLx.png)
+
+### Docker Workflow
+
+**Docker is an open platform software. It is used for developing, shipping, and running applications. Docker virtualizes the operating system of the computer on which it is installed and running. It provides the ability to package and run an application in a loosely isolated environment called a container. A container is a runnable instance of a docker image. You can create, start, stop, move, or delete a container using the Docker API or CLI. You can connect a container to one or more networks, attach storage to it, or even create a new docker image based on its current state.**
+
+## What is AWS Elastic Container Registry?
+
+**Amazon Elastic Container Registry (Amazon ECR) is a managed container image registry service. Customers can use the familiar Docker CLI, or their preferred client, to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry for your Docker images.**
