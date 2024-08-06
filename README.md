@@ -46,7 +46,7 @@ Here comes the task in which we create the repository on AWS using ECR where our
 
 Run the following command in your terminal to authenticate Docker to your ECR registry:
 
-```sh
+
 aws ecr get-login-password --region <your-region> | docker login --username AWS --password-stdin <aws_account_id>.dkr.ecr.<your-region>.amazonaws.com
 
 Replace <your-region> with your AWS region (e.g., us-west-2) and <aws_account_id> with your AWS account ID.
@@ -55,14 +55,14 @@ Replace <your-region> with your AWS region (e.g., us-west-2) and <aws_account_id
 
 Navigate to the directory containing your Dockerfile and build your Docker image with the following command:
 
-```sh
+
 docker build -t java-app .
 
 #### 2.3 Tag Docker Image
 
 Tag the Docker image so it can be pushed to your ECR repository:
 
-```sh
+
 docker tag java-app:latest <aws_account_id>.dkr.ecr.<your-region>.amazonaws.com/java-app:latest
 
 
@@ -70,10 +70,9 @@ docker tag java-app:latest <aws_account_id>.dkr.ecr.<your-region>.amazonaws.com/
 
 Push the tagged Docker image to your ECR repository:
 
-```sh
 docker push <aws_account_id>.dkr.ecr.<your-region>.amazonaws.com/java-app:latest
 
-
+```sh
 
 
 
