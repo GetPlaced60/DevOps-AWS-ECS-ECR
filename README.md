@@ -70,9 +70,9 @@ docker tag java-app:latest <aws_account_id>.dkr.ecr.<your-region>.amazonaws.com/
 
 Push the tagged Docker image to your ECR repository:
 
+```
 docker push <aws_account_id>.dkr.ecr.<your-region>.amazonaws.com/java-app:latest
-
-```sh
+```
 
 
 
