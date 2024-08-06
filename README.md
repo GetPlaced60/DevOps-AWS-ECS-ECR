@@ -27,3 +27,24 @@
 
 Here comes the task in which we create the repository on AWS using ECR where our application docker image will reside. To begin with the creation of a repository on ECR we first search ECR on AWS console and follows the below steps.
 
+
+## Detailed Process
+
+### 1. Create AWS Elastic Container Registry (ECR)
+
+1. **Open AWS Management Console**: Go to the AWS Management Console at [aws.amazon.com](https://aws.amazon.com/).
+2. **Navigate to ECR**: In the console, find the ECR service by typing "ECR" in the search bar and selecting "Elastic Container Registry".
+3. **Create Repository**:
+   - Click on "Create repository".
+   - Enter a name for your repository (e.g., `Web-App`).
+   - Choose any additional settings as needed.
+   - Click on "Create repository".
+
+### 2. Build and Push Docker Image to ECR
+
+#### 2.1 Authenticate Docker to ECR
+
+Run the following command in your terminal to authenticate Docker to your ECR registry:
+
+```sh
+aws ecr get-login-password --region <your-region> | docker login --username AWS --password-stdin <aws_account_id>.dkr.ecr.<your-region>.amazonaws.com
