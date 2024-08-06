@@ -11,9 +11,9 @@
 * AWS Account
 * Creativity is always a plus point.
 
-## What are Dockers and Containers?
+## Deployment
 
-![Docker](https://imgur.com/raGErLx.png)
+![Deployment](https://i.imgur.com/BryX8UL.jpg)
 
 ### Docker Workflow
 
@@ -73,7 +73,36 @@ Push the tagged Docker image to your ECR repository:
 ```
 docker push <aws_account_id>.dkr.ecr.<your-region>.amazonaws.com/java-app:latest
 ```
+### 3. Deploy to Amazon ECS
+1. **Open AWS Management Console:** Go to the AWS Management Console at [aws.amazon.com](https://aws.amazon.com).
+2. **Navigate to ECS:** Find the ECS service by typing "ECS" in the search bar and selecting "Elastic Container Service".
+3. **Create or Use Existing Cluster:**
+   - You can create a new cluster or use an existing one.
+4. **Create or Update Task Definition:**
+   - Create a new task definition or use an existing one.
+   - Update the task definition to use the Docker image from your ECR repository.
+5. **Create or Update Service:**
+   - Create a new service or update an existing one to use the task definition.
 
+### 4. Set Up Database on Amazon RDS
+1. **Open AWS Management Console:** Go to the AWS Management Console at [aws.amazon.com](https://aws.amazon.com).
+2. **Navigate to RDS:** Find the RDS service by typing "RDS" in the search bar and selecting "Relational Database Service".
+3. **Create Database Instance:**
+   - Click on "Create database".
+   - Choose the database engine, instance class, and storage options.
+   - Set up security groups and networking.
+
+### 5. Configure Load Balancer
+1. **Open AWS Management Console:** Go to the AWS Management Console at [aws.amazon.com](https://aws.amazon.com).
+2. **Navigate to EC2:** Find the EC2 service by typing "EC2" in the search bar and selecting "EC2".
+3. **Create or Use Existing Load Balancer:**
+   - Create a new load balancer or use an existing one.
+   - Configure the load balancer to forward traffic to your ECS service.
+
+### 6. Test Your Application
+1. Access your application through the load balancer's DNS name and verify that it is working as expected.
+
+### Authored by [Hitesh Vishwas Pogade](https://github.com/GetPlaced60)
 
 
 
